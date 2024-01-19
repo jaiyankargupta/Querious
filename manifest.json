@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Voice Assistant",
+  "version": "1.0",
+  "description": "A voice-controlled assistant for browsing.",
+  "permissions": ["activeTab", "storage", "webNavigation", "webRequest"],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  
+  "background": {
+    "service_worker": "background.js"
+  },
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  
+  "commands": {
+    "toggle-voice-command": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+V"
+      },
+      "description": "Toggle Voice Command"
+    }
+  }
+}
